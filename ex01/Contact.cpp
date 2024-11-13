@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: najeuneh < najeuneh@student.s19.be >       +#+  +:+       +#+        */
+/*   By: najeuneh <najeuneh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:57:10 by najeuneh          #+#    #+#             */
-/*   Updated: 2024/11/05 15:12:09 by najeuneh         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:30:16 by najeuneh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ bool	Contact::setphonenumber(std::string str)
 {
 	for (int i = 0; str[i]; i++)
 	{
-		if (isnumber(str[i]) == false)
+		if (isalnum(str[i]) == false)
 			return false;
 	}
 	phone_number = str;

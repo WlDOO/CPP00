@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: najeuneh < najeuneh@student.s19.be >       +#+  +:+       +#+        */
+/*   By: najeuneh <najeuneh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 16:49:46 by najeuneh          #+#    #+#             */
-/*   Updated: 2024/11/05 17:43:56 by najeuneh         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:33:06 by najeuneh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int	parser(std::string str)
 		return (0);
 	for (int i = 0; str[i]; i++)
 	{
-		if (isnumber(str[i]) == false)
+		if (isalnum(str[i]) == false)
 			return (0);
 	}
-	if (stoi(str) > 7 && stoi(str) < 0)
+	if (stoi(str) > 7 || stoi(str) < 0)
 		return 0;
 	return 1;
 }
@@ -72,7 +72,7 @@ void	PhoneBook::Search(void)
 	{
 		std::getline(std::cin, str);
 		if (parser(str) == 0)
-			std::cout << "please pick a good number";
+			std::cout << "please pick a good number : ";
 	}
 	y = std::stoi(str);
 	if (this->contact[y].getfirstname() == "")
