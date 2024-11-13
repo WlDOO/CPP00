@@ -18,7 +18,7 @@ int	parser(std::string str)
 		return (0);
 	for (int i = 0; str[i]; i++)
 	{
-		if (isalnum(str[i]) == false)
+		if (std::isdigit(str[i]) == false)
 			return (0);
 	}
 	if (stoi(str) > 7 || stoi(str) < 0)

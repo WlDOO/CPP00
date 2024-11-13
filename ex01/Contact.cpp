@@ -88,7 +88,7 @@ bool	Contact::setphonenumber(std::string str)
 {
 	for (int i = 0; str[i]; i++)
 	{
-		if (isalnum(str[i]) == false)
+		if (std::isdigit(str[i]) == false)
 			return false;
 	}
 	phone_number = str;
